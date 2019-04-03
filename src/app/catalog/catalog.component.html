@@ -27,17 +27,20 @@
 
 
   <mat-tab-group backgroundColor="primary" color="accent">
-    <mat-tab label="Categoria" routerLink="categoy">
-      <router-outlet></router-outlet>
+    <mat-tab label="Categoria">
+      <div style="border: 3px solid red">
+        <a routerLink="category"><router-outlet></router-outlet></a>
+      </div>
+
     </mat-tab>
-    <mat-tab label="Tractores" routerLink="tractor">
-      <router-outlet></router-outlet>
+    <mat-tab label="Tractores" routerLink="tractores">
+      <a routerLink="category">catalogosi</a>
     </mat-tab>
     <mat-tab label="Marca" routerLink="mark">
-
+      <a routerLink="category">catalogosi</a>
     </mat-tab>
     <mat-tab label="Modelo" routerLink="modelo">
-
+      <a routerLink="category">catalogosi</a>
     </mat-tab>
 
 

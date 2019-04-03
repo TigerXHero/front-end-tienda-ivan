@@ -50,13 +50,13 @@ import {HttpClientModule} from '@angular/common/http';
 import {baseURL} from './shared/baseurl';
 import { ConfigComponent } from './config/config.component';
 import { CapacityComponent } from './capacity/capacity.component';
-import { MarkComponent } from './mark/mark.component';
 import { ModelComponent } from './model/model.component';
-import { MotocultoresComponent } from './motocultores/motocultores.component';
-import { PalasCargadorasComponent } from './palas-cargadoras/palas-cargadoras.component';
 import { PriceComponent } from './price/price.component';
-import { TractorComponent } from './tractor/tractor.component';
-import { CategoryComponent } from './category/category.component';
+import { CategoryComponent } from './catalog/category/category.component';
+import { TractoresComponent } from './catalog/category/tractores/tractores.component';
+import { BobcatsComponent } from './catalog/category/bobcats/bobcats.component';
+import { ExcavadorasComponent } from './catalog/category/excavadoras/excavadoras.component';
+import { LlantasComponent } from './catalog/category/llantas/llantas.component';
 
 @NgModule({
   declarations: [
@@ -71,13 +71,13 @@ import { CategoryComponent } from './category/category.component';
     LoginComponent,
     ConfigComponent,
     CapacityComponent,
-    MarkComponent,
     ModelComponent,
-    MotocultoresComponent,
-    PalasCargadorasComponent,
     PriceComponent,
-    TractorComponent,
-    CategoryComponent
+    CategoryComponent,
+    TractoresComponent,
+    BobcatsComponent,
+    ExcavadorasComponent,
+    LlantasComponent
   ],
   imports: [
     BrowserModule,
