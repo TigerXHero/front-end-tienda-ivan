@@ -18,13 +18,13 @@ export class BobcatsComponent implements OnInit {
 
   items: Item[];
   public url = baseURL + 'items';
-  selectedFile: ImageSnippet;
+  selectedImage: ImageFlow;
 
   @Output() updateView = new EventEmitter();
 
   constructor(private http: HttpClient,
               @Inject('BaseURL') private BaseURL,
-              public itemService: ItemService,
+              public itemService: ItemService
   ) {
   }
 
@@ -38,10 +38,10 @@ export class BobcatsComponent implements OnInit {
 
     reader.addEventListener('load', (event: any) => {
 
-      this.selectedFile = new ImageSnippet(event.target.result, file);
+      this.selectedImage = new ImageFlow(event.target.result, file);
 
-      this.selectedFile.pending = true;
-      this.itemService.setImageItem(this.selectedFile.file, id).subscribe(
+      this.selectedImage.pending = true;
+      this.itemService.setImageItem(this.selectedImage.file, id).subscribe(
         (res) => {
           window.location.reload();
         },
@@ -65,7 +65,7 @@ export class BobcatsComponent implements OnInit {
   }
 }
 
-class ImageSnippet {
+class ImageFlow {
   pending = false;
   status = 'init';
 
