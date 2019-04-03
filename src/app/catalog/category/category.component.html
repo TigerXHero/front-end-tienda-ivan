@@ -1,12 +1,15 @@
-<p>
-  category works!
-</p>
-
-<h3>maminga ivan</h3>
-
-<button class="btn-facebook"></button>
-<!--
-<div [hidden]="items">
-  <mat-spinner></mat-spinner>
-  <h4>Loading . . . Please Wait</h4>
-</div>-->
+<mat-nav-list style=" position:absolute;
+bottom: 2px;
+top: 2px;
+    left:2px;
+    width: 99%;">
+<mat-toolbar style=" vertical-align: text-top;" >
+  <span><a mat-raised-button routerLink="bobcats">Bobcats</a></span>
+  <span><a mat-raised-button routerLink="excavadoras">Excavadoras</a></span>
+  <span><a mat-raised-button routerLink="llantas">Llantas</a></span>
+  <span><a mat-raised-button routerLink="tractores">Tractores</a></span>
+</mat-toolbar>
+<div >
+  <router-outlet></router-outlet>
+</div>
+</mat-nav-list>

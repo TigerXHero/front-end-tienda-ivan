@@ -57,6 +57,7 @@ import { TractoresComponent } from './catalog/category/tractores/tractores.compo
 import { BobcatsComponent } from './catalog/category/bobcats/bobcats.component';
 import { ExcavadorasComponent } from './catalog/category/excavadoras/excavadoras.component';
 import { LlantasComponent } from './catalog/category/llantas/llantas.component';
+import { BrandComponent } from './catalog/brand/brand.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { LlantasComponent } from './catalog/category/llantas/llantas.component';
     TractoresComponent,
     BobcatsComponent,
     ExcavadorasComponent,
-    LlantasComponent
+    LlantasComponent,
+    BrandComponent
   ],
   imports: [
     BrowserModule,

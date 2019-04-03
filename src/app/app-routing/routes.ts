@@ -11,6 +11,10 @@ import {LlantasComponent} from '../catalog/category/llantas/llantas.component';
 import {ExcavadorasComponent} from '../catalog/category/excavadoras/excavadoras.component';
 import {BobcatsComponent} from '../catalog/category/bobcats/bobcats.component';
 import {TractoresComponent} from '../catalog/category/tractores/tractores.component';
+import {ModelComponent} from '../model/model.component';
+import {BrandComponent} from '../catalog/brand/brand.component';
+import {CapacityComponent} from '../capacity/capacity.component';
+import {PriceComponent} from '../price/price.component';
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -18,12 +22,16 @@ export const routes: Routes = [
     children: [
       {path: 'category', component: CategoryComponent,
       children: [
-        {path: 'category/tractores', component: TractoresComponent},
+        {path: 'tractores', component: TractoresComponent},
         {path: 'bobcats', component: BobcatsComponent},
         {path: 'excavadoras', component: ExcavadorasComponent},
         {path: 'llantas', component: LlantasComponent}
       ]
       },
+      {path: 'model', component: ModelComponent},
+      {path: 'brand', component: BrandComponent},
+      {path: 'capacity', component: CapacityComponent},
+      {path: 'price', component: PriceComponent}
     ]},
   {path: 'contactus', component: ContactComponent},
   {path: 'aboutus', component: AboutComponent},

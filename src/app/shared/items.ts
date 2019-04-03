@@ -1,5 +1,20 @@
+
 import {Item} from './item';
 
+export const ITEMS: Item[] = [{
+  id: 1,
+  name: 'Mini Cargador N° 510 ',
+  code: 'MC510',
+  price: '125000',
+  image: null,
+  brand: 'monga',
+  model: null,
+  capacity: null,
+  category: 'bobcats',
+  subCategoryId: 1
+}];
+
+/*
 export const ITEMS: Item[] = [
   {
     id: 0,
@@ -170,3 +185,4 @@ export const ITEMS: Item[] = [
     ]
   }
 ];
+*/

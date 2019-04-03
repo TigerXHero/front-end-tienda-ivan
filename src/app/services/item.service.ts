@@ -32,4 +32,14 @@ export class ItemService {
     return <Observable<number[]>>this.http.get(baseURL + 'items').pipe(map(items => (<Item[]>items).map(item => item.id)));
   }
 
+  setImageItem(file: File, id: number): Observable<Response> {
+    let fImage = new FormData();
+    fImage.append('file', file);
+    return this.http.post<Response>(baseURL + 'items/' + id + '/image', fImage);
+  }
+
+  public deleteItem( url, id): Observable<any> {
+    return this.http.delete(baseURL + '/' + id);
+  }
+
 }
