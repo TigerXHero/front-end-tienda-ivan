@@ -35,17 +35,10 @@ export class RegistrarComponent implements OnInit {
   onSubmitItem() {
     this.requestService.add(this.url, this.itemMaq.value, []).subscribe(
       response => {
-        // window.location.reload();
-        console.log('funcionaaa');
-        console.log( this.itemMaq.value);
-
+        window.location.reload();
       },
       error => {
-        // window.location.reload();
-        console.log('error');
-
-        console.log( this.itemMaq.value);
-
+        window.location.reload();
       }
     );
     console.log( this.itemMaq.value);
