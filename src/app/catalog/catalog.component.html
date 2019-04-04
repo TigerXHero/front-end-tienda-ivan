@@ -9,9 +9,12 @@
     </div>
   </div>
 
-  <mat-grid-list [cols]="12" rowHeight = "20em">
+  <mat-grid-list [cols]="12" rowHeight = "25em">
     <mat-grid-tile [colspan] = "3" [rowspan] = "1" >
       <mat-nav-list>
+        <a mat-list-item routerLink="registrar" >
+          <mat-icon>note_add</mat-icon> <span class="nav-caption">Registrar</span>
+        </a>
         <a mat-list-item routerLink="category" >
           <mat-icon>apps</mat-icon> <span class="nav-caption">Categoria</span>
         </a>

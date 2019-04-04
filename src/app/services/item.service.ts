@@ -38,8 +38,8 @@ export class ItemService {
     return this.http.post<Response>(baseURL + 'items/' + id + '/image', fImage);
   }
 
-  public deleteItem( url, id): Observable<any> {
-    return this.http.delete(baseURL + '/' + id);
+  deleteItem( url, id): Observable<any> {
+    return this.http.delete(baseURL + id);
   }
 
 }

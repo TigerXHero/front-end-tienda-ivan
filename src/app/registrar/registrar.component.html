@@ -1,0 +1,32 @@
+<mat-grid-list [cols]="2" bind-rowHeight="'200px'" [gutterSize]="'10px'">
+<div novalidate [formGroup]="" class="example-container" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput placeholder="nombre">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="categoria">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="modelo">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="marca">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="capacidad">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="precio">
+  </mat-form-field>
+
+  <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="loginForm.form.invalid">
+    Guardar
+  </button>
+</div>
+</mat-grid-list>
+

@@ -1,23 +1,18 @@
-
 import {Component, EventEmitter, Inject, OnInit, Output} from '@angular/core';
-// import {Maquinaria} from '../shared/maquinaria';
-// import {AppURL} from '../shared/appUrl';
-// import {MaquinariaService} from '../services/maquinaria.service';
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-// import {RequestService} from '../services/request.service';
 import {Item} from '../../../shared/item';
-import {ItemService} from '../../../services/item.service';
 import {baseURL} from '../../../shared/baseurl';
+import {HttpClient} from '@angular/common/http';
+import {ItemService} from '../../../services/item.service';
 
 @Component({
-  selector: 'app-bobcats',
-  templateUrl: './bobcats.component.html',
-  styleUrls: ['./bobcats.component.scss']
+  selector: 'app-kia',
+  templateUrl: './kia.component.html',
+  styleUrls: ['./kia.component.scss']
 })
-export class BobcatsComponent implements OnInit {
+export class KiaComponent implements OnInit {
 
   items: Item[];
-  public url = baseURL + 'items/';
+  public url = baseURL + 'items';
   selectedImage: ImageFlow;
 
   @Output() updateView = new EventEmitter();
@@ -57,11 +52,9 @@ export class BobcatsComponent implements OnInit {
     this.itemService.deleteItem(this.url, id).subscribe(
       response => {
         window.location.reload();
-        console.log(this.url+id);
       },
       error => {
         window.location.reload();
-        console.log('erroree '+this.url+id);
       }
     );
   }
