@@ -39,7 +39,7 @@ export class ItemService {
   }
 
   deleteItem( url, id): Observable<any> {
-    return this.http.delete(baseURL + id);
+    return this.http.delete(baseURL + '/' + id);
   }
 
 }

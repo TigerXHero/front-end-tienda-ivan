@@ -1,32 +1,35 @@
 <mat-grid-list [cols]="2" bind-rowHeight="'200px'" [gutterSize]="'10px'">
-<div novalidate [formGroup]="" class="example-container" (ngSubmit)="onSubmit()">
+<form novalidate [formGroup]="itemMaq" (ngSubmit)="onSubmitItem()">
   <mat-form-field>
-    <input matInput placeholder="nombre">
+    <input type="text" matInput placeholder="nombre" formControlName="name">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="categoria">
+    <input type="text" matInput placeholder="categoria" formControlName="category">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="modelo">
+    <input type="text" matInput placeholder="modelo" formControlName="model">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="marca">
+    <input type="text" matInput placeholder="marca" formControlName="brand">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="capacidad">
+    <input type="text" matInput placeholder="capacidad" formControlName="capacity">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="precio">
+    <input type="text" matInput placeholder="precio" formControlName="price">
   </mat-form-field>
 
-  <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="loginForm.form.invalid">
-    Guardar
-  </button>
-</div>
+  <mat-form-field>
+    <input type="text" matInput placeholder="subcategory" formControlName="subCategoryId">
+  </mat-form-field>
+
+  <button type="submit" mat-flat-button color="primary"> Guardar</button>
+
+</form>
 </mat-grid-list>
 

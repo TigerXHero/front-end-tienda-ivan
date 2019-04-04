@@ -1,6 +1,6 @@
 <mat-grid-list [cols]="2" bind-rowHeight="'200px'" [gutterSize]="'10px'">
   <mat-grid-tile *ngFor="let item of items">
-    <div *ngIf="item.category == 'Kia'" class="col-md-6">
+    <div *ngIf="item.brand == 'Kia'" class="col-md-6">
       <img height="200px" data-src="data:image/png;base64,{{item.image}}"
            alt={{item.name}}>
       <mat-grid-tile-footer>

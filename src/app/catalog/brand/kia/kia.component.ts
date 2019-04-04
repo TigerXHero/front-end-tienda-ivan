@@ -3,6 +3,7 @@ import {Item} from '../../../shared/item';
 import {baseURL} from '../../../shared/baseurl';
 import {HttpClient} from '@angular/common/http';
 import {ItemService} from '../../../services/item.service';
+import {RequestService} from '../../../services/request.service';
 
 @Component({
   selector: 'app-kia',
@@ -19,7 +20,8 @@ export class KiaComponent implements OnInit {
 
   constructor(private http: HttpClient,
               @Inject('BaseURL') private BaseURL,
-              public itemService: ItemService
+              public itemService: ItemService,
+              private requestService: RequestService
   ) {
   }
 
@@ -49,7 +51,7 @@ export class KiaComponent implements OnInit {
   }
 
   onDelete(id: number) {
-    this.itemService.deleteItem(this.url, id).subscribe(
+    this.requestService.delete(this.url, id).subscribe(
       response => {
         window.location.reload();
       },

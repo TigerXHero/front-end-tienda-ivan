@@ -5,7 +5,7 @@ export const ITEMS: Item[] = [{
   id: 1,
   name: 'Mini Cargador N° 510 ',
   code: 'MC510',
-  price: '125000',
+  price: 125000,
   image: null,
   brand: 'monga',
   model: null,

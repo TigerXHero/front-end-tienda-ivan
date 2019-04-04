@@ -8,6 +8,7 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Item} from '../../../shared/item';
 import {ItemService} from '../../../services/item.service';
 import {baseURL} from '../../../shared/baseurl';
+import {RequestService} from '../../../services/request.service';
 
 @Component({
   selector: 'app-bobcats',
@@ -17,14 +18,15 @@ import {baseURL} from '../../../shared/baseurl';
 export class BobcatsComponent implements OnInit {
 
   items: Item[];
-  public url = baseURL + 'items/';
+  public url = baseURL + 'items';
   selectedImage: ImageFlow;
 
   @Output() updateView = new EventEmitter();
 
   constructor(private http: HttpClient,
               @Inject('BaseURL') private BaseURL,
-              public itemService: ItemService
+              public itemService: ItemService,
+              private requestService: RequestService
   ) {
   }
 
@@ -54,14 +56,12 @@ export class BobcatsComponent implements OnInit {
   }
 
   onDelete(id: number) {
-    this.itemService.deleteItem(this.url, id).subscribe(
+    this.requestService.delete(this.url, id).subscribe(
       response => {
         window.location.reload();
-        console.log(this.url+id);
       },
       error => {
         window.location.reload();
-        console.log('erroree '+this.url+id);
       }
     );
   }
